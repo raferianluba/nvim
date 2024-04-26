@@ -9,8 +9,9 @@ map("i", "<C-l>", "<Right>", {})
 map("n", "<leader>en", ":set number<CR>", { noremap = true, silent = true})
 map("n", "<leader>nn", ":set nonumber<CR>", { noremap = true, silent = true})
 map("n", ";", ":",{})
-map("n", "lspk", ':LspStop', {noremap = true, silent = true})
-map("n", "lsps", ':LspStart', {noremap = true, silent = true})
+map("n", "<leader>ls", ':LspStop<CR>', {noremap = true, silent = true})
+map("n", "<leader>lss", ':LspStart<CR>', {noremap = true, silent = true})
+
 --windows
 map("n", "<leader>sv.", ":vsplit<CR>", { noremap = true, silent = true})
 map("n", "<leader>sh.", ":split<CR>", { noremap = true, silent = true})
