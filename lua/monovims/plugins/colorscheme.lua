@@ -14,15 +14,17 @@ return {{
         })
     end },{
 
-    'n1ghtmare/noirblaze-vim',
-    lazy = false,
-    priority = 1000,
-    config = function()
-        vim.cmd([[colorscheme noirblaze]])
-        vim.cmd("set termguicolors")
-    end
-        
-    }
+    'jesseleite/nvim-noirbuddy',
+     dependencies = {
+        { 'tjdevries/colorbuddy.nvim' }
+     },
+     lazy = false,
+     priority = 1000,
+     opts = {  },
+     config = function()
+        vim.cmd([[colorscheme noirbuddy]])
+    end,
+}
 }
 
 
