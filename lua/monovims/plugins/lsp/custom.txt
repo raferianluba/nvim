@@ -1,0 +1,30 @@
+local file = vim.api
+
+file.filetype.set({
+    pattern = "*.snyk",
+    filetype = "snyk",
+})
+
+
+file.nvim_set_h1_pattern("SnykFunction", "\b([A-Za-z0-9_]+)\b")
+file.nvim_set_h1_pattern("Variables", "\\<([a-z_][a-z0-9_]*)\\>")
+file.nvim_set_h1_pattern("SnykComment", "#")
+
+--local colorsc = vim.api.nvim_get_color_scheme()
+local colorsc = require('colorbuddy').colors
+
+local comment = colorsc.Comment.fg
+local fg_c = colorsc.normal.fg
+local bg_c = colorsc.normal.bg
+local var = colorsc.primary
+local func = colorsc.Function.fg
+
+
+file.nvim_set_color_scheme({
+    {h1_group = "SnykFunction", gui = func, cterm = func },
+    {h1_group = "SnykComment", gui = #020305, cterm = #020305},
+    {h1_group = "Variables", gui = var, cterm = var}
+})
+
+
+vim.api.set([[autocmd BufRead,BufNewFile *.synk]])
