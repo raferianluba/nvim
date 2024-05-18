@@ -22,9 +22,20 @@ return {{
      priority = 1000,
      opts = {  },
      config = function()
-        vim.cmd([[colorscheme noirbuddy]])
+        --vim.cmd([[colorscheme noirbuddy]])
     end,
-}
+ },{
+    "mcchrish/zenbones.nvim",
+    lazy = false,
+    priority = 1000,
+    dependencies = {
+        'rktjmp/lush.nvim'
+    },
+    config = function ()
+        vim.cmd("set termguicolors")
+        vim.cmd([[colorscheme zenbones]])
+    end,
+    }
 }
 
 
