@@ -33,7 +33,7 @@ return {{
     },
     config = function ()
         vim.cmd("set termguicolors")
-        vim.cmd([[colorscheme kanagawabones]])
+        vim.cmd([[colorscheme zenbones]])
     end,
     }
 }
