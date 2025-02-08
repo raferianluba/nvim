@@ -13,10 +13,10 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   { import = "monovims.plugins"},
-  { import = "monovims.plugins.lsp"}, 
+  { import = "monovims.plugins.lsp"},
 },{
   install = {
-    colorscheme = { "monochrome" },
+    colorscheme = { "no-clown-fiesta" },
   },
   checker = {
     enabled = true,

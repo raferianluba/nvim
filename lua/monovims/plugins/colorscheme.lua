@@ -1,41 +1,25 @@
 return {{
-   "blazkowolf/gruber-darker.nvim",
-    lazy = false,
-    priority = 1000,
-    dependencies = {
-        --"rktjmp/lush.nvim"
-    },
-    config = function()
-        --vim.cmd([[colorscheme gruber-darker]])
-        --vim.cmd("set termguicolors")
-        require('gruber-darker').setup({
-            overrides = {
-            }
-        })
-    end },{
-
-    'jesseleite/nvim-noirbuddy',
-     dependencies = {
-        { 'tjdevries/colorbuddy.nvim' }
-     },
-     lazy = false,
-     priority = 1000,
-     opts = {  },
-     config = function()
-        --vim.cmd([[colorscheme noirbuddy]])
-    end,
- },{
-    "mcchrish/zenbones.nvim",
-    lazy = false,
-    priority = 1000,
-    dependencies = {
-        'rktjmp/lush.nvim'
-    },
-    config = function ()
-        vim.cmd("set termguicolors")
-        vim.cmd([[colorscheme zenbones]])
-    end,
+   {
+    "aktersnurra/no-clown-fiesta.nvim",
+      lazy = false,
+      priority = 1000,
+      config = function ()
+            require("no-clown-fiesta").setup({
+            transparent = false, -- Enable this to disable the bg color
+            styles = {
+            -- You can set any of the style values specified for `:h nvim_set_hl`
+                comments = {},
+                functions = {},
+                keywords = {},
+                lsp = {},
+                match_paren = {},
+                type = {},
+                variables = {},
+              },
+            })
+            vim.cmd([[colorscheme no-clown-fiesta]])
+      end,
     }
+  }
 }
-
 
