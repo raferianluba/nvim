@@ -27,6 +27,8 @@ return {
     mason_lspconfig.setup({
       -- list of servers for mason to install
       ensure_installed = {
+        "zls",
+        "rust_analyzer",
         "ts_ls",
         "html",
         "cssls",
@@ -37,7 +39,6 @@ return {
         "emmet_ls",
         "prismals",
         "pyright",
-        "rust_analyzer",
         "clangd"
       },
       -- auto-install configured servers (with lspconfig)

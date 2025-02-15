@@ -88,6 +88,12 @@ return {
       on_attach = on_attach,
     })
 
+    -- configure zig lps server
+    lspconfig["zls"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+      filetypes = {"zig"}
+    })
     -- configure tailwindcss server
     lspconfig["tailwindcss"].setup({
       capabilities = capabilities,
