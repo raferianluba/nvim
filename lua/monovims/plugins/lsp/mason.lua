@@ -47,6 +47,7 @@ return {
 
     mason_tool_installer.setup({
       ensure_installed = {
+        --"zig",
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
         "isort", -- python formatter

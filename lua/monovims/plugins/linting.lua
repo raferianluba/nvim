@@ -6,7 +6,7 @@ return {
     local lint = require("lint")
 
     lint.linters_by_ft = {
-      zig = {"zig fmt"},
+      --zig = {"zig fmt"},
       rust = {"clippy"},
       --javascript = { "eslint_d" },
       --typescript = { "eslint_d" },
