@@ -70,6 +70,11 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
+    lspconfig["ols"].setup({
+      capabilities = capabilities,
+      on_attach = on_attach,
+    })
+
     -- configure html server
     lspconfig["html"].setup({
       capabilities = capabilities,
