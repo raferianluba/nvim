@@ -71,7 +71,7 @@ return {
     end
 
    --arudino
-    lspconfig["arduino-language-server"].setup({
+    lspconfig["arduino_language_server"].setup({
         capabilities = capabilities,
         on_attach = on_attach,
     })
