@@ -70,6 +70,11 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
+   --arudino
+    lspconfig["arduino-language-server"].setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+    })
    -- configure html server
     lspconfig["html"].setup({
       capabilities = capabilities,
@@ -177,7 +182,7 @@ return {
     lspconfig["clangd"].setup({
       capabilities = capabilities,
       on_attach = on_attach,
-      filetypes = {"cpp", "c", "h"},
+      filetypes = {"cpp", "c", "h", "arduino"},
       root_dir= util.root_pattern("build"),
     })
 
