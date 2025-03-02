@@ -14,13 +14,18 @@ return {
       },
       ignore_focus = {},
       always_divide_middle = true,
-      globalstatus = false,
+      always_show_tabline = true,
+      globalstatus = true,
       refresh = {
         statusline = 1000,
         tabline = 1000,
         winbar = 1000,
       }
-    }
+    },
+    sections = {
+      lualine_c = {'filename',},
+      lualine_d = {'lsp_status',},
+    },
   })
   end,
 }
