@@ -177,6 +177,10 @@ return {
     --}, 
     })
 
+    lspconfig["eslint_d"].setup({
+        capabilities = capabilities,
+        on_attach = on_attach,
+    })
     -- configure gleam !!!
     lspconfig["gleam"].setup({
       capabilities = capabilities,
