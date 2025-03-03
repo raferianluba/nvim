@@ -83,6 +83,12 @@ return {
 
     --configure Odin Language Servdr
     lspconfig["ols"].setup({
+      init_options = {
+		checker_args = "-strict-style",
+		collections = {
+			{ name = "shared", path = vim.fn.expand('$HOME/Desktop/Odin') }
+		},
+      },
       capabilities = capabilities,
       on_attach = on_attach,
       filetypes = {"odin"},

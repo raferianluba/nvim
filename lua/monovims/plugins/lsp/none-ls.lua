@@ -1,7 +1,7 @@
 return {
   "nvimtools/none-ls.nvim", -- configure formatters & linters
   lazy = true,
-  -- event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
+     event = { "BufReadPre", "BufNewFile" }, -- to enable uncomment this
   dependencies = {
     "jay-babu/mason-null-ls.nvim",
   },
@@ -15,7 +15,6 @@ return {
     mason_null_ls.setup({
       ensure_installed = {
         "astyle",
-        "odinfmt", --odin
         "zig fmt",
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
@@ -40,8 +39,6 @@ return {
       sources = {
         --  to disable file types use
         --  "formatting.prettier.with({disabled_filetypes: {}})" (see null-ls docs)
-        formatting.ols,
-        formatting.odinfmt,
         formatting.astyle,
         formatting.prettier.with({
           extra_filetypes = { "svelte" },
