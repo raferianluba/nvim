@@ -91,12 +91,6 @@ return {
       },
       capabilities = capabilities,
       on_attach = on_attach,
-      init_options = {
-		checker_args = "-strict-style",
-		collections = {
-			{ name = "shared", path = vim.fn.expand('$HOME/ols') }
-		},
-      },
       filetypes = {"odin"},
     })
 
