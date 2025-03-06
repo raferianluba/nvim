@@ -1,11 +1,11 @@
 return {
 	{
 		{
-			"cocopon/iceberg.vim",
+			"sainnhe/sonokai",
 			lazy = false,
 			priority = 1000,
 			config = function()
-				vim.cmd([[colorscheme iceberg]])
+				vim.cmd([[colorscheme sonokai]])
 				vim.cmd([[
           hi Normal cterm=NONE gui=NONE
           hi Comment cterm=NONE gui=NONE
