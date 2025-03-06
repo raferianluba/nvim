@@ -1,19 +1,18 @@
 return {
 	{
 		{
-			"sainnhe/sonokai",
+			"rose-pine/neovim",
+			name = "rose-pine",
 			lazy = false,
 			priority = 1000,
 			config = function()
-				vim.cmd([[colorscheme sonokai]])
-				vim.cmd([[
-          hi Normal cterm=NONE gui=NONE
-          hi Comment cterm=NONE gui=NONE
-          hi Identifier cterm=NONE gui=NONE
-          hi Statement cterm=NONE gui=NONE
-          hi PreProc cterm=NONE gui=NONE
-          hi Type cterm=NONE gui=NONE
-        ]])
+				vim.cmd([[colorscheme rose-pine]])
+				require("rose-pine").setup({
+					styles = {
+						bold = false,
+						italic = true,
+					},
+				})
 			end,
 		},
 	},
