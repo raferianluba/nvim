@@ -18,7 +18,7 @@ map("n", "<leader>sh.", ":split<CR>", { noremap = true, silent = true })
 map("n", "<leader>svt", ":vsplit<CR>:term<CR>", { noremap = true, silent = true })
 map("n", "<leader>sht", ":split<CR>:term<CR>", { noremap = true, silent = true })
 --formatter
-map("n", "<leader>buf", ":lua vim.lsp.buf.format() \n :w<CR>", { noremap = true, silent = true })
+map("n", ";w", ":lua vim.lsp.buf.format() \n :w<CR>", { noremap = true, silent = true })
 
 --keyboard symbols convenience
 --map("i", ".s1", "!", {})
