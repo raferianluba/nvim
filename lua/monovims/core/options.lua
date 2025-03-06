@@ -1,12 +1,12 @@
 local opt = vim.opt -- for conciseness
 -- line numbers
-opt.relativenumber = false-- show relative line numbers
-opt.number = false-- shows absolute line number on cursor line (when relative number is on)
+opt.relativenumber = false -- show relative line numbers
+opt.number = false -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 4 -- 2 spaces for tabs (prettier default)
-opt.softtabstop = 4
-opt.shiftwidth = 4 -- 2 spaces for indent width
+opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
+opt.softtabstop = 2
+opt.shiftwidth = 2 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.guicursor = "n-v-c-sm:block,i-ci-ve:blinkwait10-blinkoff100-blinkon150-block,r:hor25"
@@ -41,5 +41,4 @@ opt.splitbelow = true -- split horizontal window to the bottom
 opt.swapfile = false
 
 --fillchars
-opt.fillchars = { eob = ' ' }
-
+opt.fillchars = { eob = " " }
