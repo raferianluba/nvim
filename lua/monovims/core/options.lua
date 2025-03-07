@@ -4,9 +4,9 @@ opt.relativenumber = false -- show relative line numbers
 opt.number = false -- shows absolute line number on cursor line (when relative number is on)
 
 -- tabs & indentation
-opt.tabstop = 2 -- 2 spaces for tabs (prettier default)
-opt.softtabstop = 2
-opt.shiftwidth = 2 -- 2 spaces for indent width
+opt.tabstop = 3 -- 2 spaces for tabs (prettier default)
+opt.softtabstop = 3
+opt.shiftwidth = 3 -- 2 spaces for indent width
 opt.expandtab = true -- expand tab to spaces
 opt.autoindent = true -- copy indent from current line when starting new one
 opt.guicursor = "n-v-c-sm:block,i-ci-ve:blinkwait10-blinkoff100-blinkon150-block,r:hor25"
