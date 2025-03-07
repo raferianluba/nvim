@@ -6,7 +6,6 @@ return {
 			lazy = false,
 			priority = 1000,
 			config = function()
-				vim.cmd([[colorscheme rose-pine-moon]])
 				require("rose-pine").setup({
 					styles = {
 						bold = false,
@@ -14,6 +13,7 @@ return {
 						transparency = true,
 					},
 				})
+				vim.cmd([[colorscheme rose-pine-moon]])
 			end,
 		},
 	},
