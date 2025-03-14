@@ -1,5 +1,4 @@
 return {
-  "gleam-lang/gleam.vim",
-  config = function()
-  end,
+	"gleam-lang/gleam.vim",
+	config = function() end,
 }
