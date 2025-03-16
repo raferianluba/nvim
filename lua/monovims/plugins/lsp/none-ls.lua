@@ -19,7 +19,7 @@ return {
 				"prettier", -- prettier formatter
 				"stylua", -- lua formatter
 				"black", -- python formatter
-				"pylint", -- python linter
+				--"pylint", -- python linter
 				"eslint_d", -- js linter
 			},
 		})
@@ -46,12 +46,6 @@ return {
 				formatting.stylua, -- lua formatter
 				formatting.isort,
 				formatting.black,
-				diagnostics.pylint,
-				--  diagnostics.eslint_d.with({ -- js/ts linter
-				--    condition = function(utils)
-				--      return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
-				--    end,
-				--  }),
 			},
 			-- configure format on save
 			on_attach = function(current_client, bufnr)

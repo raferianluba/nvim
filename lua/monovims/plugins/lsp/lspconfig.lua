@@ -69,7 +69,11 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
-
+		--java
+		lspconfig["jdtls"].setup({
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
 		--arudino
 		lspconfig["arduino_language_server"].setup({
 			capabilities = capabilities,
@@ -179,8 +183,13 @@ return {
 		-- configure gleam !!!
 		lspconfig["gleam"].setup({
 			capabilities = capabilities,
-			on_attach = on_attach,
-			filetypes = { "gleam" },
+			on_attach = function(client, bufnr)
+				if client.supports_method("textDocument/formatting") then
+					vim.api.nvim_buf_create_user_command(bufnr, "Format", function(_)
+						vim.lsp.buf.format({ async = false })
+					end, { desc = "Format current buffer with LSP" })
+				end
+			end,
 		})
 
 		--configure c/c++
