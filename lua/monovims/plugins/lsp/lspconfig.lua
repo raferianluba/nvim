@@ -69,11 +69,6 @@ return {
 			local hl = "DiagnosticSign" .. type
 			vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 		end
-		--java
-		lspconfig["jdtls"].setup({
-			capabilities = capabilities,
-			on_attach = on_attach,
-		})
 		--arudino
 		lspconfig["arduino_language_server"].setup({
 			capabilities = capabilities,
